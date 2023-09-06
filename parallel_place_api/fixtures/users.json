@@ -93,7 +93,7 @@
             "email": "RyanPhillips@aol.com",
             "username": "RyanPhillips@aol.com",
             "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
-            "is_staff": true
+            "is_staff": false
         }
     }
 ]

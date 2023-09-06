@@ -18,9 +18,24 @@ from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
 from parallel_place_api.views import register_user, login_user
+from rest_framework import routers
+from parallel_place_api.views import Student_View, Teacher_View, Token_View, Vocab_Word_View, Discussion_Comment_View, Discussion_Topic_View
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'students', Student_View, 'student')
+router.register(r'teachers', Teacher_View, 'teacher')
+router.register(r'tokens', Token_View, 'token')
+router.register(r'vocabwords', Vocab_Word_View, 'vocab')
+router.register(r'discussioncomments', Discussion_Comment_View, 'discussioncomments')
+router.register(r'discussiontopics', Discussion_Topic_View, 'discussiontopics')
+
+
+
+
 
 urlpatterns = [
     path('register', register_user),
     path('login', login_user),
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),
 ]
