@@ -1,0 +1,39 @@
+[ 
+    {
+        "model": "parallel_place_api.assignment_submission",
+        "pk": 1,
+        "fields": {
+            "teacher": 2,
+            "student": 4,
+            "submission": "Test. Not Real.",
+            "teacher_feedback": "Ooff",
+            "date_reviewed": "2023-10-21",
+            "assignment_id": 1
+        }
+    },
+    {
+        "model": "parallel_place_api.assignment_submission",
+        "pk": 1,
+        "fields": {
+            "teacher": 1,
+            "student": 4,
+            "submission": "Test. Not Real.",
+            "teacher_feedback": "Ooff",
+            "date_reviewed": "2023-10-21",
+            "assignment_id": 2
+        }
+    },
+    {
+        "model": "parallel_place_api.assignment_submission",
+        "pk": 1,
+        "fields": {
+            "teacher": 1,
+            "student": 4,
+            "submission": "Test. Not Real.",
+            "teacher_feedback": "Ooff",
+            "date_reviewed": "2023-10-21",
+            "assignment_id": 3
+        }
+    }
+
+]

@@ -1,0 +1,99 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "first_name": "Daniel",
+            "last_name": "Myers",
+            "email": "DanielMyers@aol.com",
+            "username": "DanielMyers@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": true
+        }
+    },
+
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "first_name": "Chesney",
+            "last_name": "Hardin",
+            "email": "chesney@farmersmeet.com",
+            "username": "chesney@farmersmeet.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "first_name": "Jonathan",
+            "last_name": "VanDuyne",
+            "email": "JonathanVanDuyne@aol.com",
+            "username": "JonathanVanDuyne@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "first_name": "Cassie",
+            "last_name": "Revell",
+            "email": "CassieRevell@aol.com",
+            "username": "CassieRevell@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "first_name": "Belle",
+            "last_name": "Hollander",
+            "email": "BelleHollander@aol.com",
+            "username": "BelleHollander@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "first_name": "Lance",
+            "last_name": "Lot",
+            "email": "LanceLot@aol.com",
+            "username": "LanceLot@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "first_name": "Elena",
+            "last_name": "Spradlin",
+            "email": "ElenaSpradlin@aol.com",
+            "username": "ElenaSpradlin@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": true
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "first_name": "Ryan",
+            "last_name": "Phillips",
+            "email": "RyanPhillips@aol.com",
+            "username": "RyanPhillips@aol.com",
+            "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": true
+        }
+    }
+]

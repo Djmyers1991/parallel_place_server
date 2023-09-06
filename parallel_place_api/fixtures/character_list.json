@@ -1,0 +1,28 @@
+[ {
+    "model": "parallel_place_api.character_list",
+    "pk": 1,
+    "fields": {
+        "name": "David Oliver Tate",
+        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 2,
+    "fields": {
+        "name": "Jennie Crayola Tate",
+        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 3,
+    "fields": {
+        "name": "Rick Rodney",
+        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "assignment_id": 2
+    }
+}
+]

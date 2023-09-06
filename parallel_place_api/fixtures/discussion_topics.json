@@ -1,0 +1,27 @@
+[
+    {
+    "model": "parallel_place_api.discussion_topic",
+    "pk": 1,
+    "fields": {
+        "teacher": 1,
+        "writing_prompt": "Does Dave Deserve to die alone?. Discuss!"
+    }
+},
+{
+    "model": "parallel_place_api.discussion_topic",
+    "pk": 2,
+    "fields": {
+        "teacher": 2,
+        "writing_prompt": "Who is the real villain of the story? Discuss!"
+    }
+},
+{
+    "model": "parallel_place_api.discussion_topic",
+    "pk": 3,
+    "fields": {
+        "teacher": 1,
+        "writing_prompt": "How talented is the author of the novel on a scale of 9.8 to 10? Discuss!"
+    }
+}
+
+]

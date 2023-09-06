@@ -1,0 +1,30 @@
+[{
+    "model": "parallel_place_api.assignment",
+    "pk": 1,
+    "fields": {
+        "teacher": 1,
+        "title": "Your own About The Author",
+        "assignment_instructions": "You must write your own About the Author. However, you must do so in a purposefully awful way. Like Dave, your about the author must spiral so out of control that you decided to go back in time and delete it. Linger on the effects of your decision and convey your own beliefs about the idea of eliminating your past mistakes."
+    }
+},
+{
+    "model": "parallel_place_api.assignment",
+    "pk": 2,
+    "fields": {
+        "teacher": 2,
+        "title": "Power Rankings of Characters",
+        "assignment_instructions": "Please rank your characters from favorite to least favorite. Your book club leader might ask you to re-rank them based on other attributes to foster lively conversations."
+    }
+},
+{ 
+    "model": "parallel_place_api.assignment",
+    "pk": 3,
+    "fields": {
+    "teacher": 1,
+    "title": "Inspiration List",
+    "assignment_instructions": "Please create a list of books that you've read that you feel inspired or were referenced by the book in question."
+
+}
+}
+
+]

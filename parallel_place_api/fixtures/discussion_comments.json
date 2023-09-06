@@ -1,0 +1,31 @@
+[
+    {
+    "model": "parallel_place_api.discussion_comment",
+    "pk": 1,
+    "fields": {
+        "user": 4,
+        "response": "Dave deserves to die!",
+        "discussion_topic": 2
+    }
+},
+
+{
+    "model": "parallel_place_api.discussion_comment",
+    "pk": 2,
+    "fields": {
+        "user": 7,
+        "response": "Nah, he good!",
+        "discussion_topic": 2
+    }
+},
+    {
+        "model": "parallel_place_api.discussion_comment",
+        "pk": 3,
+        "fields": {
+            "user": 4,
+            "response": "It's very poorly written, so no!",
+            "discussion_topic": 3
+        }
+}
+
+]

@@ -1,0 +1,42 @@
+[
+    {
+    "model": "parallel_place_api.inspiration_list",
+    "pk": 1,
+    "fields": {
+        "student": 2,
+        "novel": "Iliad",
+        "author": "Homer",
+        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "explanation": "Both are violent",
+        "relevance_scale": 33.4,
+        "assignment_id": 3
+    }
+},
+{
+    "model": "parallel_place_api.inspiration_list",
+    "pk": 2,
+    "fields": {
+        "student": 2,
+        "novel": "Odyssey",
+        "author": "Homer",
+        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "explanation": "Both are violent",
+        "relevance_scale": 33.4,
+        "assignment_id": 3
+    }
+},
+{
+    "model": "parallel_place_api.inspiration_list",
+    "pk": 2,
+    "fields": {
+        "student": 2,
+        "novel": "Oedipus",
+        "author": "Sophocles",
+        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "explanation": "Too much to go into now",
+        "relevance_scale": 33.4,
+        "assignment_id": 3
+    }
+}
+
+]

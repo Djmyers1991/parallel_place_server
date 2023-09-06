@@ -1,0 +1,22 @@
+[ {
+    "model": "parallel_place_api.teacher",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "bio": "I was born the GOAT and intend to die that way. I chose the accompanying image to define me because even though the man is wearing a blazer, hes always wearing shorts. It's a symbol for the duality of man is his expression — a blend of genuine pain and outrageous pleasure. This lackadaisical formality and ambiguous overflow of emotion is what I hope to convey in this book club",
+        "favorite_book": "Wislawa Szymborska's Collected Poems",
+        "representing_image": "https://www.shutterstock.com/image-photo/man-business-suit-shorts-works-home-2199010577"
+    }
+},   
+ 
+{
+    "model": "parallel_place_api.teacher",
+    "fields": {
+        "user": 8,
+        "bio": "Leading a book club with Daniel when we're reading his own book might have been a grave, grave mistake. I chose the accompanying image to define me because the color of her phone case, kimonoesque blouse, watch strap, coffee, earrings all match. That, to me, is art.",
+        "favorite_book": "The Script for Beatle Juice: The Musical",
+        "representing_image": "https://www.shutterstock.com/image-photo/young-woman-using-smartphone-video-chat-2194043797"
+    }
+}
+
+]

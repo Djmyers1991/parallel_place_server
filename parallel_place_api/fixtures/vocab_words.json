@@ -1,0 +1,42 @@
+[
+    {
+        "model": "parallel_place_api.vocab_word",
+        "pk": 1,
+        "fields": {
+            "name": "lit",
+            "definition": "To get really, really excited",
+            "creator": 1
+        }
+    },
+    {
+        "model": "parallel_place_api.vocab_word",
+        "pk": 2,
+        "fields": {
+            "name": "poggers",
+            "definition": "To get really, really insane and wild",
+            "creator": 1
+        }
+    },
+    {
+        "model": "parallel_place_api.vocab_word",
+        "pk": 3,
+        "fields": {
+            "name": "no cap",
+            "definition": "I'm telling the truth, I swear",
+            "creator": 1
+        }
+    },   
+    {
+        "model": "parallel_place_api.vocab_word",
+        "pk": 4,
+        "fields": {
+            "name": "bruh",
+            "definition": "to address one with mistrust with whom you formerly or presently felt friendship or comfort",
+            "creator": 1
+        }
+    }
+] 
+
+
+
+

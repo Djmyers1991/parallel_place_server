@@ -1,0 +1,58 @@
+[ 
+    {
+        "model": "parallel_place_api.student",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "perceived_iq": 250.8,
+            "overall_potential": 9.5 
+        }
+    },
+    {
+        "model": "parallel_place_api.student",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "perceived_iq": 250.4,
+            "overall_potential": 9.8 
+        }
+    },
+    {
+    "model": "parallel_place_api.student",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "perceived_iq": 0.4,
+        "overall_potential": 1
+    }
+}, 
+{
+    "model": "parallel_place_api.student",
+    "pk": 5,
+    "fields": {
+        "user": 5,
+        "perceived_iq": 250.4,
+        "overall_potential": 9.8 
+    }
+},
+{
+    "model": "parallel_place_api.student",
+    "pk": 6,
+    "fields": {
+        "user": 6,
+        "perceived_iq": 250.5,
+        "overall_potential": 9.7 
+    }
+},
+{
+    "model": "parallel_place_api.student",
+    "pk": 7,
+    "fields": {
+        "user": 7,
+        "perceived_iq": 100,
+        "overall_potential": 5 
+    }
+}
+
+
+]
