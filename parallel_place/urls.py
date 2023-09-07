@@ -19,7 +19,7 @@ from django.conf.urls import include
 from django.urls import path
 from parallel_place_api.views import register_user, login_user
 from rest_framework import routers
-from parallel_place_api.views import Student_View, Teacher_View, Token_View, Vocab_Word_View, Discussion_Comment_View, Discussion_Topic_View
+from parallel_place_api.views import Student_View, Teacher_View, Token_View, Vocab_Word_View, Discussion_Comment_View, Discussion_Topic_View, Assignment_Submission_View, Assignment_View, Inspiration_List_View, Character_List_View
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'students', Student_View, 'student')
@@ -28,7 +28,10 @@ router.register(r'tokens', Token_View, 'token')
 router.register(r'vocabwords', Vocab_Word_View, 'vocab')
 router.register(r'discussioncomments', Discussion_Comment_View, 'discussioncomments')
 router.register(r'discussiontopics', Discussion_Topic_View, 'discussiontopics')
-
+router.register(r'submissions', Assignment_Submission_View, 'assignmentsubmissions')
+router.register(r'assignments', Assignment_View, 'assignments')
+router.register(r'inspirations', Inspiration_List_View, 'inspirationlist')
+router.register(r'characters', Character_List_View, 'characterlist')
 
 
 
