@@ -55,6 +55,27 @@ class Assignment_Submission_View(ViewSet):
 
         return Response(serialized.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """handles PUT requests for updating a Comment"""
+        assignment_submission = Assignment_Submission.objects.get(pk=pk)
+        assignment_submission.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        assignment_submission.student = Student.objects.get(pk=request.data['student'])
+        assignment_submission.assignment = Assignment.objects.get(pk=request.data['assignment'])
+        assignment_submission.submission = request.data["submission"]
+        assignment_submission.teacher_feedback = request.data["teacher_feedback"]
+        assignment_submission.date_reviewed = request.data["date_reviewed"]
+
+
+        assignment_submission.save()
+        
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    def destroy(self, request, pk):
+        post = Assignment_Submission.objects.get(pk=pk)
+        post.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:

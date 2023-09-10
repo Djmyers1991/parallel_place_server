@@ -31,6 +31,24 @@ class Teacher_View(ViewSet):
         teacher = Teacher.objects.get(pk=pk)
         serialized = TeacherSerializer(teacher, context={'request': request})
         return Response(serialized.data, status=status.HTTP_200_OK)
+    
+    def update(self, request, pk):
+        update_teacher = Teacher.objects.get(pk=pk)
+        update_teacher.user = User.objects.get(pk=request.data['user'])
+        update_teacher.bio = request.data["bio"]
+        update_teacher.favorite_book = request.data["favorite_book"]
+        update_teacher.representing_image = request.data["representing_image"]
+
+
+
+        update_teacher.save()
+        
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    def destroy(self, request, pk):
+        post = Teacher.objects.get(pk=pk)
+        post.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""

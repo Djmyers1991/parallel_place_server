@@ -31,6 +31,39 @@ class Discussion_Topic_View(ViewSet):
         discussion_topic = Discussion_Topic.objects.get(pk=pk)
         serialized = DiscussionTopicSerializer(discussion_topic, context={'request': request})
         return Response(serialized.data, status=status.HTTP_200_OK)
+   
+    def create(self, request):
+        """Handle POST requests for service tickets
+
+        Returns:
+            Response: JSON serialized representation of newly created service ticket
+        """
+        new_topic = Discussion_Topic()
+        new_topic.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        new_topic.writing_prompt = request.data['writing_prompt']
+
+
+
+        new_topic.save()
+
+        serialized = DiscussionTopicSerializer(new_topic, many=False)
+
+        return Response(serialized.data, status=status.HTTP_201_CREATED)
+
+    def update(self, request, pk):
+        update_topic = Discussion_Topic.objects.get(pk=pk)
+        update_topic.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        update_topic.writing_prompt = request.data["writing_prompt"]
+
+
+        update_topic.save()
+        
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    def destroy(self, request, pk):
+        post = Discussion_Topic.objects.get(pk=pk)
+        post.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""

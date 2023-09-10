@@ -31,7 +31,42 @@ class Assignment_View(ViewSet):
         assignment= Assignment.objects.get(pk=pk)
         serialized = AssignmentSerializer(assignment, context={'request': request})
         return Response(serialized.data, status=status.HTTP_200_OK)
+   
+    def create(self, request):
+        """Handle POST requests for service tickets
 
+        Returns:
+            Response: JSON serialized representation of newly created service ticket
+        """
+        new_assignment = Assignment()
+        new_assignment.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        new_assignment.assignment_instructions = request.data['assignment_instructions']
+        new_assignment.title = request.data['title']
+
+
+
+        new_assignment.save()
+
+        serialized = AssignmentSerializer(new_assignment, many=False)
+
+        return Response(serialized.data, status=status.HTTP_201_CREATED)
+
+    def update(self, request, pk):
+        """handles PUT requests for updating a Comment"""
+        assignment = Assignment.objects.get(pk=pk)
+        assignment.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        assignment.assignment_instructions = request.data["assignment_instructions"]
+        assignment.title = request.data["title"]
+
+
+        assignment.save()
+        
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+    def destroy(self, request, pk):
+        post = Assignment.objects.get(pk=pk)
+        post.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:
