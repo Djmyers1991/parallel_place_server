@@ -11,6 +11,7 @@
  
 {
     "model": "parallel_place_api.teacher",
+    "pk": 8,
     "fields": {
         "user": 8,
         "bio": "Leading a book club with Daniel when we're reading his own book might have been a grave, grave mistake. I chose the accompanying image to define me because the color of her phone case, kimonoesque blouse, watch strap, coffee, earrings all match. That, to me, is art.",

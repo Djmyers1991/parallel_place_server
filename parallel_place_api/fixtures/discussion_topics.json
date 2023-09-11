@@ -11,7 +11,7 @@
     "model": "parallel_place_api.discussion_topic",
     "pk": 2,
     "fields": {
-        "teacher": 2,
+        "teacher": 8,
         "writing_prompt": "Who is the real villain of the story? Discuss!"
     }
 },

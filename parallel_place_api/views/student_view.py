@@ -36,9 +36,10 @@ class Student_View(ViewSet):
 
     def update(self, request, pk):
         update_student = Student.objects.get(pk=pk)
-        update_student.user = User.objects.get(pk=request.data['user'])
         update_student.perceived_iq = request.data["perceived_iq"]
         update_student.overall_potential = request.data["overall_potential"]
+        
+
 
 
         update_student.save()
@@ -54,7 +55,7 @@ class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:
         model = User
-        fields = ('id', 'is_staff', 'username','email',)
+        fields = ('id', 'is_staff', 'username','first_name', 'last_name', 'email',)
 
 class StudentSerializer(serializers.ModelSerializer):
     user = UserSerializer(many=False)

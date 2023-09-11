@@ -9,21 +9,44 @@ class UserView(ViewSet):
     """Handles requests for shutterbug users"""
     def list(self, request):
         """Handle GET requests to shutterbug users resource"""
-        try:
-            users = User.objects.all()
+       
+        users = User.objects.all()
             
-            if "current" in request.query_params:
-                users = users.filter(user=request.auth.user)
+        if "current" in request.query_params:
+            users = users.filter(user=request.auth.user)
             
-            serializer = UserSerializer(users, many=True, context={'request': request})
-            return Response(serializer.data)
+        serializer = UserSerializer(users, many=True, context={'request': request})
+        return Response(serializer.data)
+    
+    def retrieve(self, request, pk=None):
+        """Handle GET requests for single Teacher
+
+        Returns:
+            Response -- JSON serialized Teacher record
+        """
+
+        user = User.objects.get(pk=pk)
+        serialized = UserSerializer(user, context={'request': request})
+        return Response(serialized.data, status=status.HTTP_200_OK)
+
+    def update(self, request, pk):
+        update_user = User.objects.get(pk=pk)
+        update_user.first_name = request.data["first_name"]
+        update_user.last_name = request.data["last_name"]
+        update_user.email = request.data["email"]
+
+        update_user.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
-        except Exception as ex:
-            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            # Fields to exclude from updating
+
+        
+
+
 
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:
         model = User
-        fields = ('id', 'is_staff', 'username','email',)
+        fields = ('id', 'is_staff', 'first_name', 'last_name', 'username','email',)

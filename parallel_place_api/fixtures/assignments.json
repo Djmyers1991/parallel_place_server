@@ -11,7 +11,7 @@
     "model": "parallel_place_api.assignment",
     "pk": 2,
     "fields": {
-        "teacher": 2,
+        "teacher": 8,
         "title": "Power Rankings of Characters",
         "assignment_instructions": "Please rank your characters from favorite to least favorite. Your book club leader might ask you to re-rank them based on other attributes to foster lively conversations."
     }
