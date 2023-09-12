@@ -39,7 +39,14 @@ class Assignment_Submission_View(ViewSet):
             Response: JSON serialized representation of newly created service ticket
         """
         new_submission = Assignment_Submission()
-        new_submission.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        try:
+            teacher_pk = request.data.get('teacher')  # Assuming request.data is a dictionary
+            if teacher_pk is not None:  # Check if the 'teacher' key is present in the data
+                new_submission.teacher = Teacher.objects.get(pk=teacher_pk)
+            else:
+                new_submission.teacher = None  # Assign None if 'teacher' is not provided
+        except Teacher.DoesNotExist:
+            new_submission.teacher = None  # Handle the case where the teacher doesn't exist
         new_submission.student = Student.objects.get(pk=request.data['student'])
         new_submission.submission = request.data['submission']
         new_submission.teacher_feedback = request.data['teacher_feedback']
@@ -93,9 +100,16 @@ class StudentSerializer(serializers.ModelSerializer):
         model = Student
         fields = ('id', 'user', 'full_name')
 
+class AssignmentSerializer(serializers.ModelSerializer):
+    teacher = TeacherSerializer(many=False)
+    class Meta:
+        model = Assignment
+        fields = ('id', 'teacher', 'assignment_instructions', 'title', 'submissions_per_assignment')
+
 class AssignmentSubmissionSerializer(serializers.ModelSerializer):
     teacher = TeacherSerializer(many=False)
     student = StudentSerializer(many=False)
+    assignment = AssignmentSerializer(many=False)
     class Meta:
         model = Assignment_Submission
         fields = ('id', 'teacher', 'student', 'submission', 'teacher_feedback', 'date_reviewed', 'assignment' )
