@@ -18,6 +18,17 @@
         "favorite_book": "The Script for Beatle Juice: The Musical",
         "representing_image": "https://www.shutterstock.com/image-photo/young-woman-using-smartphone-video-chat-2194043797"
     }
+},
+{
+    "model": "parallel_place_api.teacher",
+    "pk": 10,
+    "fields": {
+        "user": 10,
+        "bio": "aaljdfaghjkgghkjhsfd",
+        "favorite_book": "alkjdsakljl;jk;kljdf",
+        "representing_image": "https://www.shutterstock.com/image-photo/young-woman-using-smartphone-video-chat-2194043797"
+    }
 }
+
 
 ]

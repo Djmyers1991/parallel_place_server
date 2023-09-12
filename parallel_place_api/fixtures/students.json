@@ -52,6 +52,15 @@
         "perceived_iq": 100,
         "overall_potential": 5 
     }
+},
+{
+    "model": "parallel_place_api.student",
+    "pk": 9,
+    "fields": {
+        "user": 9,
+        "perceived_iq": 100,
+        "overall_potential": 5 
+    }
 }
 
 

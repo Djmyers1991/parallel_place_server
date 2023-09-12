@@ -95,5 +95,31 @@
             "password": "pbkdf2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
             "is_staff": false
         }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "first_name": "Ryarn",
+            "last_name": "Philrlips",
+            "email": "RyanPhilrlips@aol.com",
+            "username": "RyanPrhillips@aol.com",
+            "password": "pbkdfr2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 10,
+        "fields": {
+            "first_name": "Dank;j;;iels",
+            "last_name": "Myerkjl;jkss",
+            "email": "DanielMyersssssmnlkjsssssssssss@aol.com",
+            "username": "DanielMyerskjljksssssssssss@aol.com",
+            "password": "pbkdfr2_sha256$320000$L9WyeeE95squbRZelePsZf$XayBzPujv5CeAnmIzcLL0orBqE3qDpJLuQsy9zOM5rc=",
+            "is_staff": true
+        }
     }
+  
+    
 ]

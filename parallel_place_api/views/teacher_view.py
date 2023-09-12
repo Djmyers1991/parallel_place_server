@@ -34,7 +34,6 @@ class Teacher_View(ViewSet):
     
     def update(self, request, pk):
         update_teacher = Teacher.objects.get(pk=pk)
-        update_teacher.user = User.objects.get(pk=request.data['user'])
         update_teacher.bio = request.data["bio"]
         update_teacher.favorite_book = request.data["favorite_book"]
         update_teacher.representing_image = request.data["representing_image"]
@@ -46,15 +45,30 @@ class Teacher_View(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
-        post = Teacher.objects.get(pk=pk)
-        post.delete()
-        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        try:
+        # Get the teacher record
+            teacher = Teacher.objects.get(pk=pk)
+        
+        # Get the associated user
+            user = teacher.user
+        
+        # Delete the teacher
+            teacher.delete()
+        
+        # Delete the associated user
+            user.delete()
+        
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Teacher.DoesNotExist:
+            return Response({'message': 'Teacher not found.'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:
         model = User
-        fields = ('id', 'is_staff', 'username','email',)
+        fields = ('id', 'is_staff', 'username','email', 'first_name', 'last_name')
 
 class TeacherSerializer(serializers.ModelSerializer):
     user = UserSerializer(many=False)

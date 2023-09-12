@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Teacher(models.Model):
 
     # Relationship to the built-in User model which has name and email
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, blank=True,null=True, on_delete=models.CASCADE)
     # Additional address field to capture from the client
     bio = models.CharField(max_length=155)
     favorite_book = models.CharField(max_length=60)
