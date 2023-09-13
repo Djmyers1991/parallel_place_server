@@ -17,7 +17,9 @@ class Assignment_Submission_View(ViewSet):
             Response -- JSON serialized list of students
         """
 
-        assignment_submissions = Assignment_Submission.objects.all()
+        assignment_submissions = Assignment_Submission.objects.order_by('-date_reviewed')
+        if "student" in request.query_params:
+                assignment_submissions = assignment_submissions.filter(student__id=request.auth.user.id)
         serialized = AssignmentSubmissionSerializer(assignment_submissions, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
@@ -65,7 +67,14 @@ class Assignment_Submission_View(ViewSet):
     def update(self, request, pk):
         """handles PUT requests for updating a Comment"""
         assignment_submission = Assignment_Submission.objects.get(pk=pk)
-        assignment_submission.teacher = Teacher.objects.get(pk=request.data['teacher'])
+        try:
+            teacher_pk = request.data.get('teacher')  # Assuming request.data is a dictionary
+            if teacher_pk is not None:  # Check if the 'teacher' key is present in the data
+                assignment_submission.teacher = Teacher.objects.get(pk=teacher_pk)
+            else:
+                assignment_submission.teacher = None  # Assign None if 'teacher' is not provided
+        except Teacher.DoesNotExist:
+            assignment_submission.teacher = None  # Handle the case where the teacher doesn't exist
         assignment_submission.student = Student.objects.get(pk=request.data['student'])
         assignment_submission.assignment = Assignment.objects.get(pk=request.data['assignment'])
         assignment_submission.submission = request.data["submission"]

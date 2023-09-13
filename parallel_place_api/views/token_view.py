@@ -23,10 +23,10 @@ class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:
         model = User
-        fields = ('id', 'is_staff', 'username','email',)
+        fields = ('id', 'is_staff', 'first_name', 'last_name','username','email',)
         
 class TokenSerializer(serializers.ModelSerializer):
     user= UserSerializer(many=False)
     class Meta:
         model = Token
-        fields = ('user', 'created')
+        fields = ('user', 'created', )
