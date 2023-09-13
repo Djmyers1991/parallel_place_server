@@ -7,3 +7,4 @@ from .inspiration_list import Inspiration_List
 from .discussion_topic import Discussion_Topic
 from .discussion_comment import Discussion_Comment
 from .assignment import Assignment
+from .about_the_author import About_The_Author

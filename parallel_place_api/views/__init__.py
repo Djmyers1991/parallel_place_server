@@ -10,3 +10,4 @@ from .assignment_view import Assignment_View
 from .inspiration_list_view import Inspiration_List_View
 from .character_list_view import Character_List_View
 from .user_view import UserView
+from .about_the_author_view import About_The_Author_View

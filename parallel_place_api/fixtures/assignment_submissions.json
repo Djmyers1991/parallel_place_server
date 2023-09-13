@@ -3,7 +3,7 @@
         "model": "parallel_place_api.assignment_submission",
         "pk": 1,
         "fields": {
-            "teacher": 2,
+            "teacher": 1,
             "student": 4,
             "submission": "Test. Not Real.",
             "teacher_feedback": "Ooff",
