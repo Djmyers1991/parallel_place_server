@@ -1,0 +1,10 @@
+[ 
+    {
+        "model": "parallel_place_api.about_the_author",
+        "pk": 1,
+        "fields": {
+            "teacher": 1,
+            "introduction": ""
+        }
+    }
+]
