@@ -16,3 +16,5 @@ python3 manage.py loaddata character_list
 python3 manage.py loaddata inspiration_list
 python3 manage.py loaddata discussion_topics
 python3 manage.py loaddata discussion_comments
+python3 manage.py loaddata about_the_author
+
