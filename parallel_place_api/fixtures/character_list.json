@@ -3,7 +3,6 @@
     "pk": 1,
     "fields": {
         "name": "David Oliver Tate",
-        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
         "assignment_id": 2
     }
 },
@@ -11,8 +10,7 @@
     "model": "parallel_place_api.character_list",
     "pk": 2,
     "fields": {
-        "name": "Jennie Crayola Tate",
-        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "name": "Jennie Crayola Tetherly",
         "assignment_id": 2
     }
 },
@@ -21,8 +19,88 @@
     "pk": 3,
     "fields": {
         "name": "Rick Rodney",
-        "image": "https://www.shutterstock.com/image-photo/athletic-young-man-climbing-over-fence-1876360843",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 4,
+    "fields": {
+        "name": "Landon Tate",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 5,
+    "fields": {
+        "name": "Lester",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 6,
+    "fields": {
+        "name": "Fast Girl",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 7,
+    "fields": {
+        "name": "Pinner",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 8,
+    "fields": {
+        "name": "Iris the Prophetess",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 9,
+    "fields": {
+        "name": "Ms.Sam",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 10,
+    "fields": {
+        "name": "Seth Tate",
+        "assignment_id": 2
+    }
+},
+
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 11,
+    "fields": {
+        "name": "Hannah Tate",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 12,
+    "fields": {
+        "name": "Jeff Tweady",
+        "assignment_id": 2
+    }
+},
+{
+    "model": "parallel_place_api.character_list",
+    "pk": 13,
+    "fields": {
+        "name": "Kurt Elizabeth Jenkins",
         "assignment_id": 2
     }
 }
-]
+] 

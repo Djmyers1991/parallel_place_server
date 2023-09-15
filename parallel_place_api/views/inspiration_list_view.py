@@ -15,7 +15,12 @@ class Inspiration_List_View(ViewSet):
             Response -- JSON serialized list of students
         """
 
-        inspiration_list = Inspiration_List.objects.all()
+        inspiration_list = Inspiration_List.objects.order_by('-novel')
+        if "student" in request.query_params and request.query_params['student'] == "current":
+            inspiration_list = Inspiration_List.filter(student__id=request.auth.user.id)
+        else:
+            pk = request.query_params['student']
+            inspiration_list = inspiration_list.filter(student=pk)
         serialized = InspirationListSerializer(inspiration_list, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
@@ -38,7 +43,6 @@ class Inspiration_List_View(ViewSet):
         """
         new_inspiration = Inspiration_List()
         new_inspiration.student = Student.objects.get(pk=request.data['student'])
-        new_inspiration.assignment = Assignment.objects.get(pk=request.data['assignment'])
         new_inspiration.novel = request.data["novel"]
         new_inspiration.author = request.data["author"]
         new_inspiration.image = request.data["image"]
@@ -57,7 +61,6 @@ class Inspiration_List_View(ViewSet):
     def update(self, request, pk):
         update_inspiration = Inspiration_List.objects.get(pk=pk)
         update_inspiration.student = Student.objects.get(pk=request.data['student'])
-        update_inspiration.assignment = Assignment.objects.get(pk=request.data['assignment'])
         update_inspiration.novel = request.data["novel"]
         update_inspiration.author = request.data["author"]
         update_inspiration.image = request.data["image"]
@@ -81,4 +84,4 @@ class Inspiration_List_View(ViewSet):
 class InspirationListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Inspiration_List
-        fields = ('id', 'student', 'novel', 'author', 'image', 'explanation', 'relevance_scale', 'assignment')
+        fields = ('id', 'student', 'novel', 'author', 'image', 'explanation', 'relevance_scale', )

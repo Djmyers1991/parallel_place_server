@@ -39,7 +39,6 @@ class Character_List_View(ViewSet):
         new_character = Character_List()
         new_character.assignment = Assignment.objects.get(pk=request.data['assignment'])
         new_character.name = request.data['name']
-        new_character.image = request.data['image']
 
 
 
@@ -53,7 +52,6 @@ class Character_List_View(ViewSet):
         """handles PUT requests for updating a Comment"""
         character_list = Character_List.objects.get(pk=pk)
         character_list.assignment = Assignment.objects.get(pk=request.data['assignment'])
-        character_list.image = request.data["image"]
         character_list.name = request.data["name"]
 
 
@@ -69,4 +67,4 @@ class Character_List_View(ViewSet):
 class CharacterListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character_List
-        fields = ('id', 'name', 'image', 'assignment',)
+        fields = ('id', 'name', 'assignment',)

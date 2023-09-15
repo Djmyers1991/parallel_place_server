@@ -12,19 +12,19 @@
     "pk": 2,
     "fields": {
         "teacher": 8,
-        "title": "Power Rankings of Characters",
-        "assignment_instructions": "Please rank your characters from favorite to least favorite. Your book club leader might ask you to re-rank them based on other attributes to foster lively conversations."
+        "title": "Character Analysis",
+        "assignment_instructions": "Pick the character you find the most interesting from the power rankings list. Guess various details about their lives. Guess their favorite restaurants, eneagram, and holidays. Explain your answers."
     }
 },
-{ 
-    "model": "parallel_place_api.assignment",
-    "pk": 3,
-    "fields": {
-    "teacher": 1,
-    "title": "Inspiration List",
-    "assignment_instructions": "Please create a list of books that you've read that you feel inspired or were referenced by the book in question."
+    {
+        "model": "parallel_place_api.assignment",
+        "pk": 3,
+        "fields": {
+            "teacher": 1,
+            "title": "Death Pool",
+            "assignment_instructions": "Which characters are dying in the next book and why?"
+        }
+}
 
-}
-}
 
 ]
