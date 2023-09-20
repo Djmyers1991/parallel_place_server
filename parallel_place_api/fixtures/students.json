@@ -4,8 +4,8 @@
         "pk": 2,
         "fields": {
             "user": 2,
-            "perceived_iq": 250.8,
-            "overall_potential": 9.5 
+            "perceived_iq": 10000000000.3,
+            "overall_potential": 10 
         }
     },
     {
