@@ -5,6 +5,8 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from parallel_place_api.models import Assignment_Submission, Teacher, Student, Assignment
 from django.contrib.auth.models import User
+from django.db.models import Q
+
 
 
 
@@ -19,7 +21,19 @@ class Assignment_Submission_View(ViewSet):
 
         assignment_submissions = Assignment_Submission.objects.order_by('-date_reviewed')
         if "student" in request.query_params:
-                assignment_submissions = assignment_submissions.filter(student__id=request.auth.user.id)
+            assignment_submissions = assignment_submissions.filter(student__id=request.auth.user.id)
+        elif "completedstudent" in request.query_params:
+            assignment_submissions = assignment_submissions.filter(Q(date_reviewed__isnull=False) & Q(student__id=request.auth.user.id))
+        elif "incomplete" in request.query_params:
+            assignment_submissions = assignment_submissions.filter(Q(date_reviewed__isnull=True) & Q(teacher = None ))
+        elif "currentungraded" in request.query_params:
+            assignment_submissions = assignment_submissions.filter(Q(date_reviewed__isnull=True) & Q(teacher__id = request.auth.user.id ))
+        elif "graded" in request.query_params:
+            assignment_submissions = assignment_submissions.filter(Q(date_reviewed__isnull=False) & Q(teacher__id = request.auth.user.id ))
+        elif "unreviewedstudent" in request.query_params:
+            assignment_submissions = assignment_submissions.filter(Q(date_reviewed__isnull=True) & Q(student__id=request.auth.user.id))
+
+            
         serialized = AssignmentSubmissionSerializer(assignment_submissions, many=True)
         return Response(serialized.data, status=status.HTTP_200_OK)
 
