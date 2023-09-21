@@ -80,7 +80,7 @@ class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for Teachers"""
     class Meta:
         model = User
-        fields = ('id', 'is_staff', 'username','email', )
+        fields = ('id', 'is_staff', 'username','last_name','email', )
 
 class VocabWordSerializer(serializers.ModelSerializer):
     creator = UserSerializer(many=False)
