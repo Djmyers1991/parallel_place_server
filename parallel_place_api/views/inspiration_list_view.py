@@ -14,7 +14,7 @@ class Inspiration_List_View(ViewSet):
         Returns:
             Response -- JSON serialized list of students
         """
-        inspiration_list = Inspiration_List.objects.all()
+        inspiration_list = Inspiration_List.objects.order_by('-relevance_scale')
 
         if "student" in request.query_params and request.query_params['student'] == "current":
             inspiration_list = Inspiration_List.filter(student__id=request.auth.user.id)

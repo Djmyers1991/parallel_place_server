@@ -49,20 +49,16 @@ class Assignment_Submission_View(ViewSet):
         return Response(serialized.data, status=status.HTTP_200_OK)
     
     def create(self, request):
-        """Handle POST requests for service tickets
-
-        Returns:
-            Response: JSON serialized representation of newly created service ticket
-        """
+     
         new_submission = Assignment_Submission()
         try:
-            teacher_pk = request.data.get('teacher')  # Assuming request.data is a dictionary
-            if teacher_pk is not None:  # Check if the 'teacher' key is present in the data
+            teacher_pk = request.data.get('teacher')  
+            if teacher_pk is not None: 
                 new_submission.teacher = Teacher.objects.get(pk=teacher_pk)
             else:
-                new_submission.teacher = None  # Assign None if 'teacher' is not provided
+                new_submission.teacher = None  
         except Teacher.DoesNotExist:
-            new_submission.teacher = None  # Handle the case where the teacher doesn't exist
+            new_submission.teacher = None  
         new_submission.student = Student.objects.get(pk=request.data['student'])
         new_submission.submission = request.data['submission']
         new_submission.teacher_feedback = request.data['teacher_feedback']
