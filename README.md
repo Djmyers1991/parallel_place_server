@@ -72,6 +72,5 @@ https://miro.com/app/board/uXjVMAhOHYo=/?share_link_id=268571184966
 
 
 
-## parallel_place_server 
-Link: https://github.com/Djmyers1991/parallel_place_server
-
+## Parallel Place Client Side Code
+https://github.com/Djmyers1991/parallel-place-client-side
